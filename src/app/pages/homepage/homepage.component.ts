@@ -1,14 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
+
 
 @Component({
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
 export class HomepageComponent {
-
+  todoList:string[] = [
+    'Liste elemanı 1',
+  ];
 }
  // imports: [NavbarComponent],
 //sayfa dediğimiz yapıların selectorü olmaz, selector diğer componentten çağırılmaya yarıyor
