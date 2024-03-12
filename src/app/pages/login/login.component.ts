@@ -1,14 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
 
 @Component({
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-
+  today: Date = new Date();
 }
  // imports: [NavbarComponent],
 //sayfa dediğimiz yapıların selectorü olmaz, selector diğer componentten çağırılmaya yarıyor
