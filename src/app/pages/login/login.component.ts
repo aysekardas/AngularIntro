@@ -1,12 +1,12 @@
-import { CommonModule } from "@angular/common";
-import { Component, OnInit } from "@angular/core";
-import { TodoService } from "../../services/todo.service";
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { TodoService } from '../../services/todo.service';
 
 @Component({
   standalone: true,
   imports: [CommonModule],
-  templateUrl: "./login.component.html",
-  styleUrl: "./login.component.scss",
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent implements OnInit {
   today: Date = new Date();
@@ -15,7 +15,15 @@ export class LoginComponent implements OnInit {
     this.todoService
       .getAll()
       .subscribe({ next: (value) => console.log(value) });
+
+    this.todoService
+      .getAll()
+      .subscribe({ next: (value) => console.log(value) });
+    this.todoService
+      .getAll()
+      .subscribe({ next: (value) => console.log(value) });
+    this.todoService
+      .getAll()
+      .subscribe({ next: (value) => console.log(value) });
   }
 }
-// imports: [NavbarComponent],
-//sayfa dediğimiz yapıların selectorü olmaz, selector diğer componentten çağırılmaya yarıyor
