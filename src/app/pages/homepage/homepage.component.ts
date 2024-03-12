@@ -8,7 +8,7 @@ import { TodoService } from '../../services/todo.service';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, HttpClientModule, FilterTodolistPipe, FormsModule],
+  imports: [CommonModule, FilterTodolistPipe, FormsModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
 })
