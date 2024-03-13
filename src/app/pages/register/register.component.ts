@@ -16,7 +16,6 @@ import {
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
-
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
 
@@ -39,13 +38,17 @@ export class RegisterComponent implements OnInit {
       ]),
     });
   }
-
   submit() {
+    this.registerForm.markAsDirty();
     if (this.registerForm.valid) {
       console.log(this.registerForm.value);
-    } else {
-      //Basic yaklaşım
-      alert('Validasyon hatası.');
     }
+  }
+
+  hasError(errorCode: string, field: string) {
+    return (
+      (this.registerForm.dirty || this.registerForm.get(field)?.touched) &&
+      this.registerForm.get(field)?.hasError(errorCode)
+    );
   }
 }
