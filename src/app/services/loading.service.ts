@@ -4,10 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LoadingService {
-  isLoading: boolean = false;
+  requestCount: number = 0;
   constructor() {}
 
-  setLoading(value: boolean) {
-    this.isLoading = value;
+  addRequest() {
+    this.requestCount++;
+  }
+  removeRequest() {
+    this.requestCount--;
   }
 }
+// requestCount + -
+// isLoading true false
