@@ -1,17 +1,17 @@
 <div class="container mt-5">
     <h3>Kayıt Ol</h3>
-    <form>
+    <form [formGroup]="registerForm" (submit)="submit()">
       <div class="mb-3">
-        <myinput label="Ad" labelId="name" />
+        <label class="form-label">E-posta Adresi</label>
+        <input formControlName="email" type="email" class="form-control" />
       </div>
       <div class="mb-3">
-        <myinput label="Soyad" labelId="surname" />
-      </div>
-      <div class="mb-3">
-        <myinput label="E-posta" labelId="email" inputType="email" />
-      </div>
-      <div class="mb-3">
-        <myinput label="Şifre" labelId="password" inputType="password" />
+        <label class="form-label">Şifre Tekrarı</label>
+        <input
+          formControlName="passwordConfirm"
+          type="password"
+          class="form-control"
+        />
       </div>
       <div class="mb-3">
         <myinput
